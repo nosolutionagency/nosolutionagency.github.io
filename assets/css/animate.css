@@ -3135,3 +3135,88 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: zoomOutUp;
   animation-name: zoomOutUp;
 }
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .bi-pricing-content-4 .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .bi-pricing-item-4 {
+      width: 90%;
+      margin-bottom: 20px;
+  }
+
+  /* Headline and subtitle adjustments */
+  .headline-title {
+      font-size: 1.5em;
+  }
+
+  .sub-title {
+      font-size: 1.2em;
+  }
+}
+
+/* Card styling for each pricing item */
+.bi-pricing-item-4 {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+}
+
+.bi-pricing-item-4:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Plan title styling */
+.plan-title {
+  font-size: 1.4em;
+  padding: 10px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Adjust padding and font-size for list items */
+.plan-list ul li {
+  font-size: 0.9em;
+  padding-left: 15px;
+  padding: 6px 0;
+  line-height: 1.5;
+}
+
+/* Styling for section headers within each list */
+.plan-list ul li strong {
+  color: #333;
+  font-weight: bold;
+  font-size: 1.1em;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Button styling */
+.price-btn a {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.price-btn a:hover {
+  background-color: #0056b3;
+}
+
+/* Additional color styles for section headers */
+.plan-list ul li strong[color=platform] { color: #ff5733; }
+.plan-list ul li strong[color=content] { color: #28a745; }
+.plan-list ul li strong[color=strategy] { color: #007bff; }
+.plan-list ul li strong[color=engagement] { color: #ffc107; }
+.plan-list ul li strong[color=reporting] { color: #dc3545; }
