@@ -3163,7 +3163,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @media (min-width: 768px) {
   #platfId{
     width: 117%;
-  }
+  }}
 /* Card styling for each pricing item */
 .bi-pricing-item-4 {
   background-color: #ffffff;
@@ -3227,3 +3227,25 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .plan-list ul li strong[color=strategy] { color: #007bff; }
 .plan-list ul li strong[color=engagement] { color: #ffc107; }
 .plan-list ul li strong[color=reporting] { color: #dc3545; }
+.expandable-list {
+  max-height:200px; /* Set your desired height limit */
+  overflow: hidden;
+  transition: max-height 0.9s ease;
+}
+
+.expandable-list.expanded {
+  max-height: none;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  border: none;
+  color: hsl(200, 86%, 42%);
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.show-less {
+  display: none; /* Hide "Show Less" button by default */
+}
