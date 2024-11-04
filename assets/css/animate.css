@@ -3135,36 +3135,32 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: zoomOutUp;
   animation-name: zoomOutUp;
 }
-/* Responsive adjustments for mobile */
-@media (max-width: 768px) {
-  #platfId{
-    width: 94%;
-  }
-  .bi-pricing-content-4 .row {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
-  .bi-pricing-item-4 {
-      width: 100%;
-      margin-bottom: 20px;
-  }
-
-  /* Headline and subtitle adjustments */
-  .headline-title {
-      font-size: 1.5em;
-  }
-
-  .sub-title {
-      font-size: 1.2em;
-  }
-  
+/* General Pricing Section */
+#bi-pricing-4 {
+  padding: 40px 0;
 }
-@media (min-width: 768px) {
-  #platfId{
-    width: 117%;
-  }}
-/* Card styling for each pricing item */
+
+.bi-section-title-4 {
+  padding-bottom: 20px;
+}
+
+.headline-title {
+  font-size: 2em;
+  perspective: 400px;
+}
+
+.headline-text {
+  display: block;
+  text-align: center;
+}
+
+.sub-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Pricing Item Card Styles */
 .bi-pricing-item-4 {
   background-color: #ffffff;
   border-radius: 8px;
@@ -3179,7 +3175,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Plan title styling */
+/* Plan Title Styling */
 .plan-title {
   font-size: 1.4em;
   padding: 10px 0;
@@ -3187,25 +3183,31 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   color: #333;
 }
 
-/* Adjust padding and font-size for list items */
+/* Specific Package Title Colors */
+.gold-pack { background-color: #886a20; color: white; }
+.silver-pack { background-color: #594b4b; color: white; }
+
+/* List Styling */
 .plan-list ul li {
   font-size: 0.9em;
-  padding-left: 15px;
-  padding: 6px 0;
   line-height: 1.5;
+  padding: 6px 0;
 }
 
-/* Styling for section headers within each list */
-.plan-list ul li strong {
-  color: #333;
-  font-weight: bold;
-  font-size: 1.1em;
-  display: block;
-  padding: 10px;
-  border-radius: 4px;
+.sub-list {
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 2px solid #ddd;
 }
 
-/* Button styling */
+/* Section Headers within Lists */
+.platforms-title { color: #ff5733; font-weight: bold; font-size: 1.1em; }
+.content-creation-title { color: #28a745; font-weight: bold; font-size: 1.1em; }
+.strategy-title { color: #007bff; font-weight: bold; font-size: 1.1em; }
+.engagement-title { color: #ffc107; font-weight: bold; font-size: 1.1em; }
+.reporting-title { color: #dc3545; font-weight: bold; font-size: 1.1em; }
+
+/* Button Styling */
 .price-btn a {
   background-color: #007bff;
   color: white;
@@ -3221,31 +3223,65 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   background-color: #0056b3;
 }
 
-/* Additional color styles for section headers */
-.plan-list ul li strong[color=platform] { color: #ff5733; }
-.plan-list ul li strong[color=content] { color: #28a745; }
-.plan-list ul li strong[color=strategy] { color: #007bff; }
-.plan-list ul li strong[color=engagement] { color: #ffc107; }
-.plan-list ul li strong[color=reporting] { color: #dc3545; }
+/* Toggle Button Styles */
+.toggle-btn {
+  background-color: transparent;
+  border: none;
+  color: #ac9357;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.toggle-btn:hover {
+  color: #b39651
+}
+
+/* Expandable List */
 .expandable-list {
-  max-height:200px; /* Set your desired height limit */
+  max-height: 380px;
   overflow: hidden;
-  transition: max-height 0.9s ease;
+  transition: max-height 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .expandable-list.expanded {
   max-height: none;
 }
 
-.toggle-btn {
-  background-color: transparent;
-  border: none;
-  color: hsl(200, 86%, 42%);
-  cursor: pointer;
-  margin-top: 10px;
-  margin-bottom: 10px;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #platfId {
+      width: 94%;
+  }
+  .bi-pricing-content-4 .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .bi-pricing-item-4 {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  .headline-title {
+      font-size: 1.5em;
+  }
+  .sub-title {
+      font-size: 1.2em;
+  }
 }
 
-.show-less {
-  display: none; /* Hide "Show Less" button by default */
+@media (min-width: 768px) {
+  #platfId {
+      width: 117%;
+  }
+}
+
+@media (max-width: 480px) {
+  .expandable-list {
+      padding: 6px;
+  }
+  .toggle-btn {
+      font-size: 0.85em;
+  }
 }
