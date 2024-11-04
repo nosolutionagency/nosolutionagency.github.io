@@ -3137,6 +3137,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
+  #platfId{
+    width: 94%;
+  }
   .bi-pricing-content-4 .row {
       display: flex;
       flex-direction: column;
@@ -3155,8 +3158,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   .sub-title {
       font-size: 1.2em;
   }
+  
 }
-
+@media (min-width: 768px) {
+  #platfId{
+    width: 117%;
+  }
 /* Card styling for each pricing item */
 .bi-pricing-item-4 {
   background-color: #ffffff;
