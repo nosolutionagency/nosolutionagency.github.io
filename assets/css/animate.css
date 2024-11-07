@@ -3286,12 +3286,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
-.bi-why-choose-feature ul li::before {
-  left: 0;
-  top: 5px;
-  width: 34px;
-  content: "";
-  height: 34px;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-image: url(../img/icon/star2.png);}
+
